@@ -1,0 +1,11 @@
+serial-proxy (0.2.0) unstable; urgency=medium
+
+  * systemd start script
+
+ -- Russ Kubik <russkubik@gmail.com>  Mon, 14 Dec 2015 14:38:46 -0600
+
+serial-proxy (0.1.0) unstable; urgency=medium
+
+  * Initial commit
+
+ -- Russ Kubik <russkubik@gmail.com>  Tue, 15 Sep 2015 12:05:46 -0600

@@ -1,0 +1,67 @@
+.TH "SERIAL-PROXY" "5" "AUGUST 2015" "russkubik@gmail.com" "User Manuals"
+.SH "NAME"
+/etc/serial-proxy/conf.d default configuration directory (used by the init
+script)
+.SH SYNOPSIS
+.br
+Configuration directory that is used by serial-proxy. All configs within
+the directory should have an .ini file extension.
+.br
+.SH SAMPLE CONFIGURATION FILE
+.PP
+.br
+[/dev/ttyS1]
+.br
+virtuals = a,b,c
+.br
+baudrate = 9600
+.br
+stopbits = 1
+.br
+bytesize = 8
+.br
+parity = none
+.br
+control = none
+.br
+.PP
+.br
+[/dev/ttyS2]
+.br
+virtuals = a,b,c
+.br
+writer = a
+.br
+baudrate = 38400
+.br
+.PP
+This configuration will proxy data for two serial devices, /dev/ttyS1 and
+/dev/ttyS1. Both of which will have three virtual serial port readers.
+/dev/ttyS2 has an optional virtual serial port writer to be able to write to
+the physical serial port from /dev/ttyS2.a.
+.PP
+If any of the serial settings are missing the following defaults will be used
+in their place.
+.PP
+.br
+baudrate = 9600
+.br
+stopbits = 1
+.br
+bytesize = 8
+.br
+parity = none
+.br
+control = none
+.br
+.SH SEE ALSO
+.BR serial-proxy (1)
+.br
+.SH FOLDER
+.br
+/etc/serial-proxy/conf.d/
+.br
+.SH AUTHOR
+serial-proxy was written by Russ Kubik <russkubik@gmail.com>.
+.PP
+This manual page was written by Russ Kubik <russkubik@gmail.com>

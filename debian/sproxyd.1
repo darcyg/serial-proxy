@@ -1,0 +1,50 @@
+.TH "SPROXYD" "1" "AUGUST 2015" "russkubik@gmail.com" "User Manuals"
+.SH "NAME"
+sproxyd \- Serial port virtualization daemon
+.SH "SYNOPSIS"
+\fBsproxyd\fR [\fIOPTIONS\fR]
+.SH "DESCRIPTION"
+Daemon that proxies data from any number of physical serial ports to virtual
+pseudoterminals.
+.SH "OPTIONS"
+.TP
+\fB--pidfile\fR
+Used with the daemon flag. PATH to a file where the process PID will be saved.
+.br
+.TP
+\fB--daemon\fR
+Run the utility in the background.
+.br
+.TP
+\fB--config\fR
+.br
+PATH to the config folder to setup serial and virtual serial ports.
+.br
+.TP
+\fB--logfile\fR
+.br
+Where to log messages to. If this is not specified, logging is disabled.
+.br
+.TP
+\fB--loglevel\fR
+.br
+What level of messages to log. Used in conjunction with --logfile and --console.
+Valid values: debug, notice, information, warning, critical. Default value: critical.
+.br
+.TP
+\fB--timeout\fR
+.br
+Polling timeout in milliseconds.
+.br
+.TP
+\fB--console\fR
+.br
+Print messages to stdout.
+.br
+.SH SEE ALSO
+.BR serial-proxy (5)
+.br
+.SH AUTHOR
+sproxyd was written by Russ Kubik <russkubik@gmail.com>.
+.PP
+This manual page was written by Russ Kubik <russkubik@gmail.com>

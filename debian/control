@@ -1,0 +1,26 @@
+Source: serial-proxy
+Priority: optional
+Maintainer: Russ Kubik <russkubik@gmail.com>
+Build-Depends: debhelper (>= 8.0.0),
+               cmake,
+               liblogcpp-dev,
+               libboost-program-options-dev,
+               libinicpp-dev,
+               dh-systemd
+Standards-Version: 3.9.3
+Section: non-free/embedded
+
+Package: serial-proxy
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Serial Port Virtualizer
+ Allows a single physical serial port to proxy its
+ data to many child pseudoterminals
+
+Package: serial-proxy-dbg
+Section: debug
+Architecture: any
+Priority: extra
+Depends: serial-proxy (= ${binary:Version}), ${misc:Depends}
+Description: serial-proxy debug symbols
+ Debugging symbols for serial-proxy library
